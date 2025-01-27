@@ -3,23 +3,23 @@
 layout: home
 
 hero:
-  name: "Python Robyn"
-  text: "Robyn Chinese Network"
-  tagline: My great project tagline
+  name: "Robyn 罗宾"
+  text: "Robyn 中文网"
+  tagline: 一个快速、利于创新、由社区驱动的 Python Web 框架
   actions:
     - theme: brand
-      text: Markdown Examples
-      link: /markdown-examples
+      text: 快速开始
+      link: /example-application/getting-started
     - theme: alt
-      text: API Examples
-      link: /api-examples
+      text: API 参考
+      link: /api-reference/installation
 
 features:
-  - title: Feature A
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature B
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-  - title: Feature C
-    details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+  - title: Rust 运行时
+    details: Robyn 将 Python 的异步功能与 Rust 运行时相结合，以提供可靠、可扩展的 Web 解决方案。
+  - title: 极致体验
+    details: 体验快速的项目搭建、愉快的使用体验和强大的插件支持。
+  - title: 我们的理念
+    details: 快速。创新者友好。强大。社区驱动。
 ---
 
