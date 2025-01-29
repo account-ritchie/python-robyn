@@ -4,10 +4,23 @@ import { defineConfig } from 'vitepress'
 export default defineConfig({
   title: "Robyn 罗宾",
   description: "高性能的 Python Web 框架",
+  // favicon.ico
+  head: [
+    ['link', { rel: 'icon', href: '/favicon.ico' }],
+    //Google AdSense
+    // [
+    //   "script",
+    //   {
+    //     "data-ad-client": "YOURCLIENTID like ca-pub-3798***", 
+    //     async: '',
+    //     src: "https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js",
+    //   },
+    // ],
+  ],
   lang: 'zh-CN',
   themeConfig: {
     siteTitle: 'Robyn 罗宾',
-    logo: 'images/robyn_logo.webp',
+    logo: '/images/logo.png',
     nav: [
       { text: '文档', link: '/example-application' },
       { text: '插件', link: '/plugins' },
@@ -55,7 +68,7 @@ export default defineConfig({
           { text: '多进程执行', link: '/api-reference/multiprocess-execution' },
           { text: '直接使用 Rust', link: '/api-reference/using-rust-directly' },
           { text: 'GraphQl 支持', link: '/api-reference/graphql-support' }
-          
+
         ]
       },
       {
@@ -89,21 +102,86 @@ export default defineConfig({
       { icon: 'github', link: 'https://github.com/account-ritchie/python-robyn' }
     ],
 
-    outlineTitle: '页面导航'
+    outlineTitle: '页面导航',
+    // algolia search
+    search: {
+      provider: 'algolia',
+      options: {
+        appId: 'GMMTOYG32P',
+        apiKey: '12a1a5ba532100db45cc21be7813015a',
+        indexName: 'python_robyn_pages_dev_gmmtoyg32p_pages',
+        locales: {
+          zh: {
+            placeholder: '搜索文档',
+            translations: {
+              button: {
+                buttonText: '搜索文档',
+                buttonAriaLabel: '搜索文档'
+              },
+              modal: {
+                searchBox: {
+                  resetButtonTitle: '清除查询条件',
+                  resetButtonAriaLabel: '清除查询条件',
+                  cancelButtonText: '取消',
+                  cancelButtonAriaLabel: '取消'
+                },
+                startScreen: {
+                  recentSearchesTitle: '搜索历史',
+                  noRecentSearchesText: '没有搜索历史',
+                  saveRecentSearchButtonTitle: '保存至搜索历史',
+                  removeRecentSearchButtonTitle: '从搜索历史中移除',
+                  favoriteSearchesTitle: '收藏',
+                  removeFavoriteSearchButtonTitle: '从收藏中移除'
+                },
+                errorScreen: {
+                  titleText: '无法获取结果',
+                  helpText: '你可能需要检查你的网络连接'
+                },
+                footer: {
+                  selectText: '选择',
+                  navigateText: '切换',
+                  closeText: '关闭',
+                  searchByText: '搜索提供者'
+                },
+                noResultsScreen: {
+                  noResultsText: '无法找到相关结果',
+                  suggestedQueryText: '你可以尝试查询',
+                  reportMissingResultsText: '你认为该查询应该有结果？',
+                  reportMissingResultsLinkText: '点击反馈'
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    // carbon ads
+    carbonAds: {
+      code: 'your-carbon-code',
+      placement: 'your-carbon-placement'
+    },
+
+    lastUpdated: {
+      text: '最后更新于',
+      formatOptions: {
+        dateStyle: 'short',
+        timeStyle: 'medium'
+      }
+    },
+    footer: {
+      message: '基于 MIT 许可发布',
+      copyright: `版权所有 © 2025-${new Date().getFullYear()} Ritchie`
+    },
+    
   },
+
   mpa: true,
   sitemap: {
     hostname: 'https://python-robyn.pages.dev/'
   },
-  provider: 'algolia',
-  options: {
-    appId: 'GMMTOYG32P',
-    apiKey: '12a1a5ba532100db45cc21be7813015a',
-    indexName: '...'
-  },
   markdown: {
     //中文配置
-    container:{
+    container: {
       tipLabel: "提示",
       warningLabel: "警告",
       // noteLabel: "注意",
@@ -112,6 +190,8 @@ export default defineConfig({
       infoLabel: "信息",
     }
   },
-  // favicon.ico
-  head: [['link', { rel: 'icon', href: 'images/logo.png' }]]
+
+
+  
+
 })

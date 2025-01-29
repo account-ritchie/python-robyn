@@ -243,7 +243,7 @@ async def query_get(req_obj: Request, query_params: QueryParams):
 
 任何请求参数都可以在处理程序函数中使用，可以使用类型注释或使用保留名称。
 
-::: tip
+::: warning 注意
 
 请注意，类型注释将优先于保留名称。
 
