@@ -14,6 +14,7 @@ function chineseSearchOptimize(input) {
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
+  base: '/',
   vite: {
     plugins: [
       pagefindPlugin({
@@ -26,7 +27,8 @@ export default defineConfig({
         // toNavigate: '',
         // toClose: '',
         // searchBy: '',
-      })],
+      })
+    ],
   },
   title: "Robyn 罗宾",
   description: "高性能的 Python Web 框架",
@@ -228,10 +230,11 @@ export default defineConfig({
     },
 
   },
-
-  mpa: true,
+  // 实验性功能
+  // mpa: true,
   sitemap: {
-    hostname: 'https://python-robyn.pages.dev/'
+    hostname: 'https://python-robyn.pages.dev/',
+    lastmodDateOnly: false
   },
   markdown: {
     //中文配置
@@ -244,7 +247,7 @@ export default defineConfig({
       infoLabel: "信息",
     }
   },
-
+  cleanUrls: true,
 
 })
 

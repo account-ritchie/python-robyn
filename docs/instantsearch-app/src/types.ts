@@ -1,4 +1,4 @@
-import type { Renderer, Connector, WidgetFactory } from 'instantsearch.js/es';
+import type { Renderer, Connector, WidgetFactory } from 'instantsearch.js';
 
 /*
  * Parameters send only to the widget creator function
